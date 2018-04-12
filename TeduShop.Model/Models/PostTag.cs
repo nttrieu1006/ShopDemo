@@ -12,8 +12,10 @@ namespace TeduShop.Model.Models
     public class PostTag
     {
         [Key]
+        [Column(Order=1)]
         public int PostID { get; set; }
         [Key]
+        [Column(Order = 2, TypeName = "varchar")]
         [MaxLength(50)]
         public string TagID { get; set; }
 
