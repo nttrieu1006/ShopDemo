@@ -1,13 +1,14 @@
 ﻿using TeduShop.Data.Infrastructure;
 using TeduShop.Model.Models;
 
-
 namespace TeduShop.Data.Repositories
 {
-    public interface ISupportIOnlineRepository { }
-    public class SupportIOnlineRepository : RepositoryBase<SupportOnline>,ISupportIOnlineRepository
+    public interface ISupportIOnlineRepository : IRepository<SupportOnline> { }
+
+    public class SupportIOnlineRepository : RepositoryBase<SupportOnline>, ISupportIOnlineRepository
     {
-        public SupportIOnlineRepository(IDbFactory dbFactory) : base(dbFactory) { 
-}
+        public SupportIOnlineRepository(IDbFactory dbFactory) : base(dbFactory)
+        {
+        }
     }
 }
